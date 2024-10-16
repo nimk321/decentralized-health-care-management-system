@@ -2,7 +2,7 @@ import { TelemedicineConsultation } from '../entities/TelemedicineConsultation';
 import { Doctor } from '../entities/Doctor';
 import { Patient } from '../entities/Patient';
 
-export class TelemedicineConsultation {
+export class TelemedicineConsultations {
     public initiateConsultation(consultation: TelemedicineConsultation, doctor: Doctor, patient: Patient): void {
         consultation.initiateConsultation();
         console.log(`Consultation initiated between Dr. ${doctor.getName()} and patient ${patient.getName()}`);
