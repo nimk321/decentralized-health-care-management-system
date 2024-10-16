@@ -6,7 +6,7 @@ import { Prescription } from './entities/Prescription';
 import { InsuranceClaim } from './entities/InsuranceClaim';
 
 import { PatientRegistration } from './functions/PatientRegistration';
-import { TelemedicineConsultation as TelemedicineProcess } from './functions/TelemedicineConsultation';
+import { TelemedicineConsultations as TelemedicineProcess } from './functions/TelemedicineConsultation';
 import { PrescriptionManagement } from './functions/PrescriptionManagement';
 import { InsuranceClaimProcessing } from './functions/InsuranceClaimProcessing';
 import { ResearchDataSharing } from './functions/ResearchDataSharing';
