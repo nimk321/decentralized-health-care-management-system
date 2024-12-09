@@ -1,0 +1,37 @@
+# Ignore node modules and dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Ignore TypeScript source files if using compiled JavaScript
+*.ts
+!dist/**/*.js
+
+# Ignore local environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore test files and coverage reports
+*.spec.ts
+*.test.ts
+coverage
+
+# Ignore Docker-related files and configs not needed in the image
+Dockerfile
+.dockerignore
+
+# Ignore version control and other project files
+.git
+.gitignore
+.idea
+.vscode
+*.swp
+*.swo
+
+# Ignore logs and temp files
+*.log
+*.temp
+tmp/
+logs/
+

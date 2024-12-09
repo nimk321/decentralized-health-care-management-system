@@ -1,5 +1,5 @@
 {
-  "name": "health-care-management-system",
+  "name": "decentralized-health-care-management-system",
   "version": "1.0.0",
   "description": "A TypeScript-based application for managing decentralized health care processes.",
   "main": "dist/index.js",
@@ -11,5 +11,10 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }
