@@ -37,7 +37,7 @@ To get started with the project, clone the repository and install the dependenci
 ### Prerequisites
 
 - Node.js (>=14.x)
-- npm or yarn (for managing dependencies)
+- npm (for managing dependencies)
 - Docker (for containerized deployments, optional)
 - TypeScript (>=4.x)
 
@@ -55,22 +55,6 @@ To get started with the project, clone the repository and install the dependenci
    ```bash
    npm install
    ```
-
-   Or with yarn:
-
-   ```bash
-   yarn install
-   ```
-
-### Configuration
-
-Set up environment variables by creating a `.env` file in the root directory, as required by the application.
-
-```env
-# Example environment variables
-DATABASE_URL=mongodb://localhost:27017/dhms
-PORT=3000
-```
 
 ## Project Structure
 
@@ -136,14 +120,6 @@ decentralized-health-care-management-system/
    npm start
    ```
 
-   Or with Yarn:
-
-   ```bash
-   yarn start
-   ```
-
-3. Access the application at `http://localhost:3000` (or the port you set in the `.env` file).
-
 ## Testing
 
 This project uses Jest for testing. To run the tests:
@@ -154,29 +130,7 @@ This project uses Jest for testing. To run the tests:
    npm test
    ```
 
-2. Run tests using yarn:
-
-   ```bash
-   yarn test
-   ```
-
 Test results will be displayed in the console.
-
-## Docker Setup
-
-1. Build the Docker image:
-
-   ```bash
-   docker build -t dhms .
-   ```
-
-2. Run the Docker container:
-
-   ```bash
-   docker run -p 3000:3000 dhms
-   ```
-
-The application will be accessible at `http://localhost:3000`.
 
 ## CI/CD
 
