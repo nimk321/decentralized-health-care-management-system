@@ -160,6 +160,83 @@ This will ensure that all packages are installed fresh and that there are no ver
   nvm use 14
   ```
 
+## Version Control Challenges
+
+### **Issue:**  
+- **Pushing updates** to the repository's main branch was rejected.
+- **Conflicts** arose due to mismatches between local and remote states.
+- **Improper upstream configuration** resulted in failed synchronization attempts.
+
+### **Cause:**  
+- Local repository was **out of sync** with the remote branch.
+- Remote repository contained **new changes**, leading to conflicts.
+- **Upstream configuration** was incorrect, causing issues during push/pull attempts.
+
+### **Resolution:**  
+- **Fetched changes** from the remote repository:
+    ```bash
+    git fetch origin
+    ```
+- **Merged changes** into the local repository:
+    ```bash
+    git merge origin/main
+    ```
+- Resolved **merge conflicts** manually by reviewing both versions of the code:
+    - Open conflicting files and choose the appropriate changes.
+    - Commit the resolved files:
+    ```bash
+    git add <file>
+    git commit -m "Resolved merge conflict"
+    ```
+- In rare cases, performed a **force reset**:
+    ```bash
+    git reset --hard origin/main
+    ```
+
+---
+
+## 2. Continuous Integration Workflow Errors
+
+### **Issue:**  
+- Automation pipeline **failed to execute** due to misconfiguration in the CI/CD configuration file.
+- Errors were primarily related to **event triggers** and **execution steps**.
+
+### **Cause:**  
+- **Improper formatting** in the configuration file.
+- **Missing or incorrect event triggers** and execution steps.
+  
+### **Resolution:**  
+- **Revised the CI configuration file** to align with platform requirements.
+    - Corrected event trigger definitions and execution steps.
+    - Ensured correct YAML indentation and structure.
+
+- Example of corrected **GitHub Actions workflow** (for CI/CD):
+    ```yaml
+    name: CI/CD Pipeline
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Set up Node.js
+            uses: actions/setup-node@v2
+            with:
+              node-version: '14'
+          - name: Install dependencies
+            run: npm install
+          - name: Run tests
+            run: npm test
+    ```
+
+- After modifications, **validated the configuration** by re-running the pipeline:
+    ```bash
+    # Trigger a manual workflow run on GitHub Actions
+    git push origin main
 ---
 
 This guide should provide you with a comprehensive approach to resolving common issues in the DHMS project. For more detailed or specific errors, please consult the relevant documentation or project maintainers.
