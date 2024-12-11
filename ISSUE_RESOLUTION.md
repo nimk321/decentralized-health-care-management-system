@@ -195,7 +195,7 @@ This will ensure that all packages are installed fresh and that there are no ver
 
 ---
 
-## 2. Continuous Integration Workflow Errors
+## Continuous Integration Workflow Errors
 
 ### **Issue:**  
 - Automation pipeline **failed to execute** due to misconfiguration in the CI/CD configuration file.
